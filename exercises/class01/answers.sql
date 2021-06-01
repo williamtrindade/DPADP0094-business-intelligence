@@ -25,3 +25,9 @@ GROUP BY patrocinador.nompat;
 SELECT patrocinador.nompat, SUM(atleta_pat.val_pat) FROM patrocinador, atleta_pat
 WHERE atleta_pat.codpat = patrocinador.codpat
 GROUP BY patrocinador.nompat;
+
+-- 7
+SELECT estado.nomeuf, COUNT(atleta.siglauf) 
+FROM atleta, estado 
+WHERE estado.siglauf = atleta.siglauf 
+GROUP BY estado.nomeuf;
