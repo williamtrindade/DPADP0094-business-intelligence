@@ -20,3 +20,8 @@ GROUP BY atleta.nomat;
 SELECT patrocinador.nompat, COUNT(atleta_pat.codat) FROM patrocinador, atleta_pat
 WHERE atleta_pat.codpat = patrocinador.codpat
 GROUP BY patrocinador.nompat;
+
+-- 6 
+SELECT patrocinador.nompat, SUM(atleta_pat.val_pat) FROM patrocinador, atleta_pat
+WHERE atleta_pat.codpat = patrocinador.codpat
+GROUP BY patrocinador.nompat;
