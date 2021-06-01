@@ -15,3 +15,8 @@ GROUP BY atleta.nomat;
 SELECT atleta.nomat, SUM(atleta_pat.val_pat) FROM atleta, patrocinador, atleta_pat
 WHERE atleta_pat.codat = atleta.codat AND atleta_pat.codpat = patrocinador.codpat
 GROUP BY atleta.nomat;
+
+-- 5 
+SELECT patrocinador.nompat, COUNT(atleta_pat.codat) FROM patrocinador, atleta_pat
+WHERE atleta_pat.codpat = patrocinador.codpat
+GROUP BY patrocinador.nompat;
