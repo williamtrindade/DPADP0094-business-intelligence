@@ -10,3 +10,8 @@ WHERE atleta_pat.codat = atleta.codat AND atleta_pat.codpat = patrocinador.codpa
 SELECT atleta.nomat, COUNT(atleta_pat.codpat) FROM atleta, patrocinador, atleta_pat
 WHERE atleta_pat.codat = atleta.codat AND atleta_pat.codpat = patrocinador.codpat
 GROUP BY atleta.nomat;
+
+-- 4
+SELECT atleta.nomat, SUM(atleta_pat.val_pat) FROM atleta, patrocinador, atleta_pat
+WHERE atleta_pat.codat = atleta.codat AND atleta_pat.codpat = patrocinador.codpat
+GROUP BY atleta.nomat;
