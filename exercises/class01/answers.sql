@@ -31,3 +31,10 @@ SELECT estado.nomeuf, COUNT(atleta.siglauf)
 FROM atleta, estado 
 WHERE estado.siglauf = atleta.siglauf 
 GROUP BY estado.nomeuf;
+
+-- 8
+SELECT estado.nomeuf, COUNT(atleta.siglauf), SUM(atleta_pat.val_pat)
+FROM atleta, estado, atleta_pat
+WHERE estado.siglauf = atleta.siglauf
+AND atleta_pat.codat = atleta.codat
+GROUP BY estado.nomeuf;
