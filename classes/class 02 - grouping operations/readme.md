@@ -83,5 +83,6 @@ from VENDA_OVOS_PASCOA
 GROUP BY CUBE((LOJA, MARCA), PESO);
 ```
 ____
-
+### REFERÊNCIA
+> [https://www.postgresql.org/docs/11/queries-table-expressions.html](https://www.postgresql.org/docs/11/queries-table-expressions.html)
 
